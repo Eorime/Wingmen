@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, TickerImg, TickerText } from "./style";
-import TickerIcon from "../../assets/images/TapeIcon.png";
+import TickerIcon from "../../../assets/images/TapeIcon.png";
 
 const TickerTape = () => {
   return (
