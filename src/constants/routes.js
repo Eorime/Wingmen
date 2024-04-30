@@ -1,11 +1,11 @@
 const home = "/";
-const about = "/about";
+const services = "/services";
 const contact = "/contact";
 const work = "/work";
 
 export const routes = {
   home,
-  about,
+  services,
   contact,
   work,
 };

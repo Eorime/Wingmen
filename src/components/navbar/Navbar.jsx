@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Container, Logo } from "./style";
+import {
+  Container,
+  Line,
+  Logo,
+  NavbarContainer,
+  NavbarElement,
+  StyledLink,
+} from "./style";
 import LogoWhite from "../../assets/images/Logo.png";
 import LogoBlue from "../../assets/images/Logo-blue.png";
 import { useNavigate } from "react-router-dom";
@@ -21,6 +28,24 @@ const Navbar = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       />
+      <NavbarContainer>
+        <StyledLink to={routes.home}>
+          <NavbarElement>HOME</NavbarElement>
+          <Line></Line>
+        </StyledLink>
+        <StyledLink to={routes.work}>
+          <NavbarElement>WORK</NavbarElement>
+          <Line></Line>
+        </StyledLink>
+        <StyledLink to={routes.contact}>
+          <NavbarElement>CONTACT</NavbarElement>
+          <Line></Line>
+        </StyledLink>
+        <StyledLink to={routes.services}>
+          <NavbarElement>SERVICES</NavbarElement>
+          <Line></Line>
+        </StyledLink>
+      </NavbarContainer>
     </Container>
   );
 };

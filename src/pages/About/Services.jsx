@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 
-const Work = () => {
+const Services = () => {
   return (
     <div>
       <Navbar />
@@ -9,4 +9,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Services;
