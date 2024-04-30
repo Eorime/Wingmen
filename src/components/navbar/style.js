@@ -14,7 +14,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: -83px;
-  margin-left: 490px;
+  margin-left: 550px;
 `;
 
 export const StyledLink = styled(Link)`
@@ -23,10 +23,33 @@ export const StyledLink = styled(Link)`
 `;
 
 export const NavbarElement = styled.p`
-  font-size: 28px;
+  font-size: 23px;
   color: #ffffff;
-  margin-right: 255px;
-  margin-right: 250px;
+  margin-left: 75px;
+  margin-right: 140px;
+  margin-top: 35px;
+  font-weight: 300;
+  letter-spacing: 5px;
+`;
+
+export const NavbarContact = styled.p`
+  font-size: 23px;
+  color: #ffffff;
+  margin-left: 45px;
+  margin-right: 140px;
+  margin-top: 35px;
+  font-weight: 300;
+  letter-spacing: 5px;
+`;
+
+export const NavbarServices = styled.p`
+  font-size: 23px;
+  color: #ffffff;
+  margin-left: 25px;
+  margin-right: 140px;
+  margin-top: 35px;
+  font-weight: 300;
+  letter-spacing: 5px;
 `;
 
 export const Logo = styled.img`
@@ -52,6 +75,6 @@ export const Line = styled.div`
   width: 3px;
   height: 36px;
   position: absolute;
-  margin-left: 225px;
-  margin-top: -63px;
+  margin-left: 270px;
+  margin-top: -55px;
 `;

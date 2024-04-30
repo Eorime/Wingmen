@@ -3,8 +3,10 @@ import {
   Container,
   Line,
   Logo,
+  NavbarContact,
   NavbarContainer,
   NavbarElement,
+  NavbarServices,
   StyledLink,
 } from "./style";
 import LogoWhite from "../../assets/images/Logo.png";
@@ -38,11 +40,11 @@ const Navbar = () => {
           <Line></Line>
         </StyledLink>
         <StyledLink to={routes.contact}>
-          <NavbarElement>CONTACT</NavbarElement>
+          <NavbarContact>CONTACT</NavbarContact>
           <Line></Line>
         </StyledLink>
         <StyledLink to={routes.services}>
-          <NavbarElement>SERVICES</NavbarElement>
+          <NavbarServices>SERVICES</NavbarServices>
           <Line></Line>
         </StyledLink>
       </NavbarContainer>

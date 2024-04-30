@@ -1,4 +1,10 @@
+@font-face {
+  font-family: "FHWA";
+  src: url("../src/assets/fonts/fhwa-series-e-2020-font/Fhwaseriese2020minus50-RpZyM.otf")
+    format("opentype");
+}
+
 body {
   background-color: #ffffff;
-  font-family: "FHWASeriesE2020";
+  font-family: "FHWA", Arial, Helvetica, sans-serif;
 }
