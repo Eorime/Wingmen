@@ -15,6 +15,16 @@ const TickerTape = () => {
         <TickerImg src={TickerIcon} />
         WINGMEN IS A DESIGN STUDIO
       </TickerText>
+      <TickerText>
+        <TickerImg src={TickerIcon} />
+        WINGMEN IS A DESIGN STUDIO
+        <TickerImg src={TickerIcon} />
+        WINGMEN IS A DESIGN STUDIO
+        <TickerImg src={TickerIcon} />
+        WINGMEN IS A DESIGN STUDIO
+        <TickerImg src={TickerIcon} />
+        WINGMEN IS A DESIGN STUDIO
+      </TickerText>
     </Container>
   );
 };

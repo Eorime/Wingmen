@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 export const Container = styled.div`
   width: 100%;
   overflow: hidden;
+  white-space: nowrap;
 `;
 
 const tickerScroll = keyframes`
@@ -10,13 +11,12 @@ const tickerScroll = keyframes`
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-100% + 100vw));
+    transform: translateX(-100%);
   }
 `;
 
 export const TickerText = styled.p`
   display: inline-block;
-  white-space: nowrap;
   margin-top: 210px;
   font-size: 48px;
   animation: ${tickerScroll} 15s linear infinite;
