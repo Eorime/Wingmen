@@ -19,7 +19,7 @@ export const TickerText = styled.p`
   display: inline-block;
   margin-top: 210px;
   font-size: 48px;
-  animation: ${tickerScroll} 15s linear infinite;
+  animation: ${tickerScroll} 30s linear infinite;
   animation-fill-mode: both;
 `;
 
