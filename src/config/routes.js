@@ -1,7 +1,6 @@
 import { routes } from "../constants/routes";
 import Home from "../pages/Home/Home";
-import Contact from "../pages/Contact/Contact";
-import Work from "../pages/Work/Work";
+import Portfolio from "../pages/Portfolio/Portfolio";
 import Services from "../pages/Services/Services";
 
 export const appRoutes = [
@@ -14,11 +13,7 @@ export const appRoutes = [
     Component: Services,
   },
   {
-    path: routes.contact,
-    Component: Contact,
-  },
-  {
-    path: routes.work,
-    Component: Work,
+    path: routes.portfolio,
+    Component: Portfolio,
   },
 ];

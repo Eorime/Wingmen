@@ -4,5 +4,5 @@ export const Container = styled.div`
   position: absolute;
   font-size: 48px;
   left: 120px;
-  top: 200px;
+  top: 1800px;
 `;

@@ -1,11 +1,9 @@
 const home = "/";
 const services = "/services";
-const contact = "/contact";
-const work = "/work";
+const portfolio = "/portfolio";
 
 export const routes = {
   home,
   services,
-  contact,
-  work,
+  portfolio,
 };

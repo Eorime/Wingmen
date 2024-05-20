@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -20,6 +20,10 @@ export const NavbarContainer = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
+
+  &: hover {
+    cursor: pointer;
+  }
 `;
 
 export const NavbarElement = styled.p`
