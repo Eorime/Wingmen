@@ -32,7 +32,7 @@ export const MoreWorkButton = styled.button`
   left: 1600px;
   position: absolute;
   font-weight: bold;
-  top: 1200px;
+  top: 1150px;
   border: none;
   padding-right: 60px;
 

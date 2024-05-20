@@ -1,8 +1,8 @@
 import { routes } from "../constants/routes";
 import Home from "../pages/Home/Home";
-import About from "../pages/About/Services";
 import Contact from "../pages/Contact/Contact";
 import Work from "../pages/Work/Work";
+import Services from "../pages/Services/Services";
 
 export const appRoutes = [
   {
@@ -11,7 +11,7 @@ export const appRoutes = [
   },
   {
     path: routes.services,
-    Component: About,
+    Component: Services,
   },
   {
     path: routes.contact,
