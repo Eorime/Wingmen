@@ -1,15 +1,22 @@
 import React from "react";
 import Navbar from "../../navbar/Navbar";
-import ServicesHeader from "../../ServicesComponents/servicesHeader/ServicesHeader";
-import { Container } from "./style";
-import ServiceList from "../../ServicesComponents/serviceList/ServiceList";
+import {
+  Container,
+  ServiceContainer,
+  ServiceElement,
+  ServicesHeader,
+} from "./style";
 
 const Services = () => {
   return (
     <Container>
-      <Navbar />
-      <ServicesHeader />
-      <ServiceList />
+      <ServiceContainer>
+        <ServicesHeader>SERVICES</ServicesHeader>
+        <ServiceElement></ServiceElement>
+        <ServiceElement></ServiceElement>
+        <ServiceElement></ServiceElement>
+        <ServiceElement></ServiceElement>
+      </ServiceContainer>
     </Container>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -9,4 +10,10 @@ export const Container = styled.div`
   background-color: #d9d9d9;
   font-size: 48px;
   padding: 5px;
+  z-index: -1;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;

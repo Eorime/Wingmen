@@ -5,4 +5,5 @@ export const Container = styled.div`
   position: relative;
   top: 500px;
   left: 120px;
+  z-index: -1;
 `;
