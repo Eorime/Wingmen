@@ -13,18 +13,20 @@ import LogoWhite from "../../assets/images/Logo.png";
 import LogoBlue from "../../assets/images/Logo-blue.png";
 import { Link } from "react-scroll";
 import { routes } from "../../constants/routes";
+import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container>
-      <Logo
-        src={isHovered ? LogoBlue : LogoWhite}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        to={routes.home}
-      />
+      <RouterLink to={routes.home}>
+        <Logo
+          src={isHovered ? LogoBlue : LogoWhite}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        />
+      </RouterLink>
       <NavbarContainer>
         <StyledLink to="home" smooth={true} duration={500}>
           <NavbarElement>HOME</NavbarElement>

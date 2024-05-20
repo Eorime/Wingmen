@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
 import ServicesHeader from "../../components/ServicesComponents/servicesHeader/ServicesHeader";
-import { Container } from "./style";
 import ServiceList from "../../components/ServicesComponents/serviceList/ServiceList";
+import Navbar from "../../components/navbar/Navbar";
+import { Container } from "./style";
 
-const Services = () => {
+const ServicesLanding = () => {
   return (
     <Container>
       <Navbar />
@@ -14,4 +14,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesLanding;

@@ -5,9 +5,9 @@ import TickerTape from "../../components/LandingComponents/tickerTape/TickerTape
 import Purpose from "../../components/LandingComponents/purpose/Purpose";
 import Description from "../../components/LandingComponents/description/Description";
 import WhatsAppContact from "../../components/LandingComponents/whatsAppContact/WhatsAppContact";
-import Work from "../../pages/Work/Work";
-import Contact from "../Contact/Contact";
-import Services from "../Services/Services";
+import Work from "../../components/LandingComponents/work/Work";
+import Contact from "../../components/LandingComponents/contact/Contact";
+import Services from "../../components/LandingComponents/services/Services";
 
 const Home = () => {
   return (
