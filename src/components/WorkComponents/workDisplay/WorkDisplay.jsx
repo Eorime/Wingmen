@@ -1,8 +1,19 @@
 import React from "react";
-import { Container } from "./style";
+import {
+  Container,
+  MoreWorkButton,
+  WorkContainer,
+  WorkHeaderText,
+} from "./style";
 
 const WorkDisplay = () => {
-  return <Container>WorkDisplay</Container>;
+  return (
+    <Container>
+      <WorkHeaderText>WORK</WorkHeaderText>
+      <WorkContainer></WorkContainer>
+      <MoreWorkButton>MORE</MoreWorkButton>
+    </Container>
+  );
 };
 
 export default WorkDisplay;
