@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
+  position: absolute;
+  z-index: -1;
 `;
 
 const tickerScroll = keyframes`
