@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../../navbar/Navbar";
+import { Container } from "./style";
 import ContactHeader from "../../ContactComponents/contactHeader/ContactHeader";
 
 const Contact = () => {
   return (
-    <div>
+    <Container>
       <ContactHeader />
-    </div>
+    </Container>
   );
 };
 

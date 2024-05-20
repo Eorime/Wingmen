@@ -8,10 +8,11 @@ import WhatsAppContact from "../../components/LandingComponents/whatsAppContact/
 import Work from "../../components/LandingComponents/work/Work";
 import Contact from "../../components/LandingComponents/contact/Contact";
 import Services from "../../components/LandingComponents/services/Services";
+import { Container } from "./style";
 
 const Home = () => {
   return (
-    <div>
+    <Container>
       <Navbar />
       <Element name="home">
         <TickerTape />
@@ -34,7 +35,7 @@ const Home = () => {
       <Element name="contact">
         <Contact />
       </Element>
-    </div>
+    </Container>
   );
 };
 
