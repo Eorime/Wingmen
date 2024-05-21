@@ -1,6 +1,6 @@
 const home = "/";
 const services = "/services";
-const portfolio = "/portfolio";
+const portfolio = "/work";
 
 export const routes = {
   home,

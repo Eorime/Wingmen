@@ -6,7 +6,7 @@ const Work = () => {
   const navigate = useNavigate();
 
   const handleMoreButton = function () {
-    navigate("/portfolio");
+    navigate("/work");
   };
 
   return (
