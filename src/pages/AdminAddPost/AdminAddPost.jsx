@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
 
-const Admin = () => {
+const AdminAddPost = () => {
   return (
     <Container>
       <AdminNavigation />
@@ -10,4 +10,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default AdminAddPost;

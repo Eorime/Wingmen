@@ -1,8 +1,11 @@
 import { routes } from "../constants/routes";
 import Home from "../pages/Home/Home";
 import Portfolio from "../pages/Portfolio/Portfolio";
-import Services from "../components/LandingComponents/services/Services";
 import ServicesLanding from "../pages/ServicesLanding/ServicesLanding";
+import Admin from "../pages/Admin/Admin";
+import { Component } from "react";
+import AdminPosts from "../pages/AdminPosts/AdminPosts";
+import AdminAddPost from "../pages/AdminAddPost/AdminAddPost";
 
 export const appRoutes = [
   {
@@ -16,5 +19,17 @@ export const appRoutes = [
   {
     path: routes.portfolio,
     Component: Portfolio,
+  },
+  {
+    path: routes.admin,
+    Component: Admin,
+  },
+  {
+    path: routes.adminPosts,
+    Component: AdminPosts,
+  },
+  {
+    path: routes.addPost,
+    Component: AdminAddPost,
   },
 ];
