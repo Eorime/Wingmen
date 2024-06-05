@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import { Container } from "./style";
+import {
+  Container,
+  OneProjectContainer,
+  ProjectDate,
+  ProjectDescription,
+  ProjectName,
+} from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const AdminOnePost = () => {
   const [projectData, setProjectData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
   const { id } = useParams();
+
+  const handleEditProject = () => {
+    navigate("/");
+  };
+
+  const handleDeleteProject = () => {};
 
   useEffect(() => {
     const fetchOnePost = async () => {
@@ -35,11 +48,13 @@ const AdminOnePost = () => {
         <p>Loading...</p>
       ) : (
         projectData && (
-          <div>
-            <p>{projectData.name}</p>
-            <p>{projectData.date}</p>
-            <p>{projectData.description}</p>
-          </div>
+          <OneProjectContainer>
+            <ProjectName>{projectData.name}</ProjectName>
+            <ProjectDate>{projectData.date}</ProjectDate>
+            <ProjectDescription>{projectData.description}</ProjectDescription>
+            <button>Edit Project</button>
+            <button>Delete Project</button>
+          </OneProjectContainer>
         )
       )}
       {error && <p>Error: {error}</p>}

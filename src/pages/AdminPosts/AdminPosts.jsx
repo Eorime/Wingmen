@@ -38,8 +38,8 @@ const AdminPosts = () => {
     navigate(`/projects/${id}`);
   };
 
-  const handleEditProject = () => {
-    navigate("/");
+  const handleEditProject = (id) => {
+    navigate(`/projects/${id}/edit`);
   };
 
   return (
@@ -59,7 +59,10 @@ const AdminPosts = () => {
                 <button onClick={() => handleViewProject(project._id)}>
                   See Project
                 </button>
-                <button onClick={handleEditProject}>Edit Project</button>
+                <button onClick={() => handleEditProject(project._id)}>
+                  Edit Project
+                </button>
+                <button>Delete Project</button>
               </ProjectContainer>
             ))}
           </AllProjectsContainer>

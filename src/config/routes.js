@@ -7,6 +7,7 @@ import { Component } from "react";
 import AdminPosts from "../pages/AdminPosts/AdminPosts";
 import AdminAddPost from "../pages/AdminAddPost/AdminAddPost";
 import AdminOnePost from "../pages/AdminOnePost/AdminOnePost";
+import AdminEditPost from "../pages/AdminEditPost/AdminEditPost";
 
 export const appRoutes = [
   {
@@ -36,5 +37,9 @@ export const appRoutes = [
   {
     path: routes.addPost,
     Component: AdminAddPost,
+  },
+  {
+    path: routes.editProject,
+    Component: AdminEditPost,
   },
 ];
