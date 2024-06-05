@@ -2,9 +2,9 @@ const home = "/";
 const services = "/services";
 const portfolio = "/work";
 const admin = "/admin";
-const adminPosts = `${admin}/adminPosts`;
-const addPost = `${admin}/addPost`;
-const adminOnePost = `adminPosts/:id`
+const adminPosts = `${admin}/projects`;
+const addPost = `${admin}/addProject`;
+const adminOnePost = `projects/:id`;
 
 export const routes = {
   home,
@@ -13,5 +13,5 @@ export const routes = {
   admin,
   adminPosts,
   addPost,
-  adminOnePost
+  adminOnePost,
 };

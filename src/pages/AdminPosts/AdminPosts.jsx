@@ -10,11 +10,13 @@ import {
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
 import { fetchData } from "../../api";
+import { useNavigate } from "react-router-dom";
 
 const AdminPosts = () => {
   const [postsData, setPostsData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -32,6 +34,14 @@ const AdminPosts = () => {
     fetchAllPosts();
   }, []);
 
+  const handleViewProject = (id) => {
+    navigate(`/projects/${id}`);
+  };
+
+  const handleEditProject = () => {
+    navigate("/");
+  };
+
   return (
     <Container>
       <AdminNavigation />
@@ -46,6 +56,10 @@ const AdminPosts = () => {
                 <ProjectName>{project.name}</ProjectName>
                 <ProjectDate>{project.date}</ProjectDate>
                 <ProjectDescription>{project.description}</ProjectDescription>
+                <button onClick={() => handleViewProject(project._id)}>
+                  See Project
+                </button>
+                <button onClick={handleEditProject}>Edit Project</button>
               </ProjectContainer>
             ))}
           </AllProjectsContainer>
