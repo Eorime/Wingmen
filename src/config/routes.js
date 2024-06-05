@@ -6,6 +6,7 @@ import Admin from "../pages/Admin/Admin";
 import { Component } from "react";
 import AdminPosts from "../pages/AdminPosts/AdminPosts";
 import AdminAddPost from "../pages/AdminAddPost/AdminAddPost";
+import AdminOnePost from "../pages/AdminOnePost/AdminOnePost";
 
 export const appRoutes = [
   {
@@ -27,6 +28,10 @@ export const appRoutes = [
   {
     path: routes.adminPosts,
     Component: AdminPosts,
+  },
+  {
+    path: routes.adminOnePost,
+    Component: AdminOnePost,
   },
   {
     path: routes.addPost,

@@ -25,10 +25,10 @@ const AdminNavigation = () => {
           <AdminElement>ADMIN PANEL</AdminElement>
         </StyledLink>
         <StyledLink to={routes.adminPosts}>
-          <AdminElement>POSTS</AdminElement>
+          <AdminElement>PROJECTS</AdminElement>
         </StyledLink>
         <StyledLink to={routes.addPost}>
-          <AdminElement>ADD POST</AdminElement>
+          <AdminElement>ADD PROJECT</AdminElement>
         </StyledLink>
       </AdminNavigationContainer>
     </Container>

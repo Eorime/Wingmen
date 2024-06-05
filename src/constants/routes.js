@@ -4,6 +4,7 @@ const portfolio = "/work";
 const admin = "/admin";
 const adminPosts = `${admin}/adminPosts`;
 const addPost = `${admin}/addPost`;
+const adminOnePost = `adminPosts/:id`
 
 export const routes = {
   home,
@@ -12,4 +13,5 @@ export const routes = {
   admin,
   adminPosts,
   addPost,
+  adminOnePost
 };
