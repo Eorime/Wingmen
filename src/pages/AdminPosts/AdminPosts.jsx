@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "./style";
+import {
+  AllProjectsContainer,
+  Container,
+  ProjectContainer,
+  ProjectDate,
+  ProjectDescription,
+  ProjectName,
+  ProjectsHeader,
+} from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
 import { fetchData } from "../../api";
 
@@ -30,16 +38,18 @@ const AdminPosts = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
-          <h2>Projects:</h2>
-          <ul>
+        <>
+          <ProjectsHeader>PROJECTS</ProjectsHeader>
+          <AllProjectsContainer>
             {postsData.map((project, index) => (
-              <li key={index}>
-                <p>{project.name}</p>
-              </li>
+              <ProjectContainer key={index}>
+                <ProjectName>{project.name}</ProjectName>
+                <ProjectDate>{project.date}</ProjectDate>
+                <ProjectDescription>{project.description}</ProjectDescription>
+              </ProjectContainer>
             ))}
-          </ul>
-        </div>
+          </AllProjectsContainer>
+        </>
       )}
       {error && <p>Error: {error}</p>}{" "}
     </Container>
