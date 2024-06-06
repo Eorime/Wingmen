@@ -23,3 +23,12 @@ export const postData = async (url, requestData) => {
   }
   throw new Error("Couldn't post data, front.");
 };
+
+export const deleteData = async (url) => {
+  const response = await fetch(url, { method: "DELETE" });
+
+  if (response.ok) {
+    return;
+  }
+  throw new Error("Couldn't delete data, front.");
+};

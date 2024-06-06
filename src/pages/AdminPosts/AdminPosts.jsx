@@ -9,7 +9,7 @@ import {
   ProjectsHeader,
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
-import { fetchData } from "../../api";
+import { deleteData, fetchData } from "../../api";
 import { useNavigate } from "react-router-dom";
 
 const AdminPosts = () => {
@@ -42,6 +42,15 @@ const AdminPosts = () => {
     navigate(`/projects/${id}/edit`);
   };
 
+  const handleDeleteProject = async (id) => {
+    try {
+      await deleteData(`http://localhost:5000/projects/${id}`);
+      setPostsData(postsData.filter((project) => project._id !== id));
+    } catch (error) {
+      setError("Couldn't delete the project.");
+    }
+  };
+
   return (
     <Container>
       <AdminNavigation />
@@ -62,13 +71,15 @@ const AdminPosts = () => {
                 <button onClick={() => handleEditProject(project._id)}>
                   Edit Project
                 </button>
-                <button>Delete Project</button>
+                <button onClick={() => handleDeleteProject(project._id)}>
+                  Delete Project
+                </button>
               </ProjectContainer>
             ))}
           </AllProjectsContainer>
         </>
       )}
-      {error && <p>Error: {error}</p>}{" "}
+      {error && <p>Error: {error}</p>}
     </Container>
   );
 };

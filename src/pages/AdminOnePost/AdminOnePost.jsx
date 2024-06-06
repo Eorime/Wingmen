@@ -21,8 +21,6 @@ const AdminOnePost = () => {
     navigate("/");
   };
 
-  const handleDeleteProject = () => {};
-
   useEffect(() => {
     const fetchOnePost = async () => {
       try {
