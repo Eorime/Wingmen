@@ -32,3 +32,19 @@ export const deleteData = async (url) => {
   }
   throw new Error("Couldn't delete data, front.");
 };
+
+export const updateData = async (url, requestData) => {
+  const response = await fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(requestData),
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  }
+  throw new Error("Couldn't update data, front.");
+};
