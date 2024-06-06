@@ -43,6 +43,14 @@ const AdminPosts = () => {
   };
 
   const handleDeleteProject = async (id) => {
+    const isConfirmed = window.confirm(
+      "Are you sure you want to delete this project?"
+    );
+
+    if (!isConfirmed) {
+      return;
+    }
+
     try {
       await deleteData(`http://localhost:5000/projects/${id}`);
       setPostsData(postsData.filter((project) => project._id !== id));
