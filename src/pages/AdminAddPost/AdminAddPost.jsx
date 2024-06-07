@@ -75,7 +75,7 @@ const AdminAddPost = () => {
           />
         </FormGroup>
         <Button type="submit" onClick={handleSubmit}>
-          Submit
+          Create
         </Button>
       </Form>
       {error && <ErrorMessage>{error}</ErrorMessage>}

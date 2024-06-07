@@ -18,7 +18,7 @@ const AdminOnePost = () => {
   const { id } = useParams();
 
   const handleEditProject = () => {
-    navigate("/");
+    navigate(`/projects/${id}/edit`);
   };
 
   useEffect(() => {
@@ -50,8 +50,7 @@ const AdminOnePost = () => {
             <ProjectName>{projectData.name}</ProjectName>
             <ProjectDate>{projectData.date}</ProjectDate>
             <ProjectDescription>{projectData.description}</ProjectDescription>
-            <button>Edit Project</button>
-            <button>Delete Project</button>
+            <button onClick={handleEditProject}>Edit Project</button>
           </OneProjectContainer>
         )
       )}

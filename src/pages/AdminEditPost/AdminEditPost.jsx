@@ -6,6 +6,7 @@ const AdminEditPost = () => {
   return (
     <Container>
       <AdminNavigation />
+      <h1 style={{ marginLeft: "50%" }}>HII</h1>
     </Container>
   );
 };
