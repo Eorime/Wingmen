@@ -21,6 +21,10 @@ export const LogoContainer = styled.div`
 
 export const LoginLogo = styled.img`
   width: 150px;
+
+  &: hover {
+    cursor: pointer;
+  }
 `;
 
 export const Form = styled.form`
@@ -42,14 +46,15 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 85%;
-  font-size: 25px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
   border: 1px solid black;
   border-radius: 8px;
 `;
 
 export const LoginButton = styled.button`
-  width: 85%;
+  width: 108%;
   font-size: 18px;
   margin-top: 12%;
   border: 1px solid black;
