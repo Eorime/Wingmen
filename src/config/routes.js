@@ -3,12 +3,12 @@ import Home from "../pages/Home/Home";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import ServicesLanding from "../pages/ServicesLanding/ServicesLanding";
 import Admin from "../pages/Admin/Admin";
-import { Component } from "react";
 import AdminPosts from "../pages/AdminPosts/AdminPosts";
 import AdminAddPost from "../pages/AdminAddPost/AdminAddPost";
 import AdminOnePost from "../pages/AdminOnePost/AdminOnePost";
 import AdminEditPost from "../pages/AdminEditPost/AdminEditPost";
 import Login from "../pages/Login/Login";
+import RequireAuth from "../components/requireAuth/RequireAuth";
 
 export const appRoutes = [
   {
@@ -25,23 +25,43 @@ export const appRoutes = [
   },
   {
     path: routes.admin,
-    Component: Admin,
+    Component: () => (
+      <RequireAuth>
+        <Admin />
+      </RequireAuth>
+    ),
   },
   {
     path: routes.adminPosts,
-    Component: AdminPosts,
+    Component: () => (
+      <RequireAuth>
+        <AdminPosts />
+      </RequireAuth>
+    ),
   },
   {
     path: routes.adminOnePost,
-    Component: AdminOnePost,
+    Component: () => (
+      <RequireAuth>
+        <AdminOnePost />
+      </RequireAuth>
+    ),
   },
   {
     path: routes.addPost,
-    Component: AdminAddPost,
+    Component: () => (
+      <RequireAuth>
+        <AdminAddPost />
+      </RequireAuth>
+    ),
   },
   {
     path: routes.editProject,
-    Component: AdminEditPost,
+    Component: () => (
+      <RequireAuth>
+        <AdminEditPost />
+      </RequireAuth>
+    ),
   },
   {
     path: routes.login,

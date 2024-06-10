@@ -12,14 +12,18 @@ import {
 import Logo from "../../assets/images/Logo.png";
 import { useNavigate } from "react-router-dom";
 import { postData } from "../../api";
+import { useAuth } from "../../context/AuthContextProvider";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  //functions with hooks
+  const auth = useAuth();
   const navigate = useNavigate();
 
+  //functions for handling clicks
   const handleLogoClick = () => {
     navigate("/");
   };
@@ -37,6 +41,7 @@ const Login = () => {
     } catch (error) {
       setError("Couldn't sign in. Please try again with valid credentials");
     }
+    auth.login();
   };
 
   const handleSubmit = (e) => {

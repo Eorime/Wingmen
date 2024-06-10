@@ -5,15 +5,24 @@ import {
   AdminLogo,
   AdminNavigationContainer,
   Container,
+  LogOutButton,
   StyledLink,
 } from "./style";
 import Logo from "../../../assets/images/Logo.png";
 import { routes } from "../../../constants/routes";
+import { useAuth } from "../../../context/AuthContextProvider";
 
 const AdminNavigation = () => {
   const navigate = useNavigate();
+  const auth = useAuth();
 
+  //functions for handling clicks
   const handleLogoClick = () => {
+    navigate("/");
+  };
+
+  const handleLogOut = () => {
+    auth.logout();
     navigate("/");
   };
 
@@ -30,6 +39,7 @@ const AdminNavigation = () => {
         <StyledLink to={routes.addPost}>
           <AdminElement>ADD PROJECT</AdminElement>
         </StyledLink>
+        <LogOutButton onClick={handleLogOut}>LOG OUT</LogOutButton>
       </AdminNavigationContainer>
     </Container>
   );

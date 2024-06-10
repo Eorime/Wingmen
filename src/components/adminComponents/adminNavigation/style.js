@@ -40,3 +40,18 @@ export const AdminLogo = styled.img`
     cursor: pointer;
   }
 `;
+
+export const LogOutButton = styled.button`
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 0px;
+  font-family: "FHWA", Arial, Helvetica, sans-serif;
+  margin-top: 80%;
+  margin-left: -35%;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
