@@ -35,13 +35,13 @@ const Login = () => {
         password: password,
       });
 
+      auth.login();
       setEmail("");
       setPassword("");
       navigate("/admin");
     } catch (error) {
       setError("Couldn't sign in. Please try again with valid credentials");
     }
-    auth.login();
   };
 
   const handleSubmit = (e) => {

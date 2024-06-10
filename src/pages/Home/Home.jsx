@@ -10,6 +10,7 @@ import Contact from "../../components/LandingComponents/contact/Contact";
 import Services from "../../components/LandingComponents/services/Services";
 import { Container } from "./style";
 import Footer from "../../components/footer/Footer";
+import InquiryForm from "../../components/LandingComponents/inquiryForm/InquiryForm";
 
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ const Home = () => {
       <Element name="contact">
         <Contact />
       </Element>
+      <InquiryForm />
       <Footer />
     </Container>
   );
