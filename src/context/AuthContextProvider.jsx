@@ -3,14 +3,14 @@ import React, { createContext, useContext, useState } from "react";
 const AuthContext = createContext(null);
 
 const AuthContextProvider = ({ children }) => {
-  const [authenticated, setAuthenticated] = useState(null);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const login = (user) => {
-    setAuthenticated(user);
+    setAuthenticated(true);
   };
 
   const logout = (user) => {
-    setAuthenticated(null);
+    setAuthenticated(false);
   };
 
   return (

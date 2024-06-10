@@ -25,7 +25,7 @@ const Login = () => {
 
   //functions for handling clicks
   const handleLogoClick = () => {
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   const handleLogin = async () => {
