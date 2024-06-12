@@ -31,7 +31,7 @@ export const EmailInput = styled.input`
   font-size: 24px;
 `;
 
-export const InquiryInput = styled.input`
+export const InquiryInput = styled.textarea`
   width: 60%;
   font-size: 24px;
   padding-left: 2%;
@@ -39,6 +39,7 @@ export const InquiryInput = styled.input`
   padding-bottom: 40%;
   border: solid 1px;
   z-index: 1;
+  resize: vertical;
 `;
 
 export const SendButton = styled.button`
@@ -53,4 +54,9 @@ export const SendButton = styled.button`
   &: hover {
     cursor: pointer;
   }
+`;
+
+export const EmailFormatError = styled.p`
+  position: absolute;
+  color: red;
 `;
