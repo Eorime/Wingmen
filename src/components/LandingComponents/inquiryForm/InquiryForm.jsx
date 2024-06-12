@@ -8,6 +8,7 @@ import {
   InquiryInput,
   Label,
   SendButton,
+  SuccessMessage,
 } from "./style";
 import { postData } from "../../../api";
 
@@ -15,6 +16,7 @@ const InquiryForm = () => {
   const [email, setEmail] = useState("");
   const [inquiry, setInquiry] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,6 +55,7 @@ const InquiryForm = () => {
     }
 
     setError("");
+    setSuccess("Inquiry sent successfully!");
     handleSend();
   };
 
@@ -76,6 +79,7 @@ const InquiryForm = () => {
           ></InquiryInput>
         </FormGroup>
         {error && <EmailFormatError>{error}</EmailFormatError>}
+        {success && <SuccessMessage>{success}</SuccessMessage>}
         <SendButton type="submit">SEND</SendButton>
       </Form>
     </Container>

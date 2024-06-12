@@ -60,3 +60,7 @@ export const EmailFormatError = styled.p`
   position: absolute;
   color: red;
 `;
+
+export const SuccessMessage = styled.p`
+  position: absolute;
+`;
