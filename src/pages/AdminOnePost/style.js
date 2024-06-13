@@ -13,3 +13,5 @@ export const ProjectDate = styled.h3``;
 export const ProjectDescription = styled.p``;
 
 export const ProjectImg = styled.img``;
+
+export const ImagesContainer = styled.div``;
