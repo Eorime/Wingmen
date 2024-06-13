@@ -13,6 +13,12 @@ export const Label = styled.label``;
 
 export const Input = styled.input``;
 
+export const TextArea = styled.textarea`
+  resize: vertical;
+  width: 60%;
+  padding-bottom: 40%;
+`;
+
 export const Button = styled.button``;
 
 export const ErrorMessage = styled.p``;

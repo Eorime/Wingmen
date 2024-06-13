@@ -7,6 +7,7 @@ import {
   FormGroup,
   Input,
   Label,
+  TextArea,
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
 import { postData } from "../../api";
@@ -66,7 +67,7 @@ const AdminAddPost = () => {
         </FormGroup>
         <FormGroup>
           <Label>Description:</Label>
-          <Input
+          <TextArea
             type="text"
             name="description"
             value={formData.description}

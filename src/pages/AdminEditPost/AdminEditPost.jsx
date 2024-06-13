@@ -40,7 +40,10 @@ const AdminEditPost = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -79,12 +82,21 @@ const AdminEditPost = () => {
             />
           </FormGroup>
           <FormGroup>
-            <Label>Date:</Label>
-            <Input type="text" value={formData.date} onChange={handleChange} />
+            <Label>Date</Label>
+            <Input
+              type="text"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+            />
           </FormGroup>
           <FormGroup>
             <Label>Description</Label>
-            <TextArea value={formData.description} onChange={handleChange} />
+            <TextArea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+            />
           </FormGroup>
           <SaveButton type="submit">Save</SaveButton>
           {error && <p style={{ color: "red" }}>{error}</p>}
