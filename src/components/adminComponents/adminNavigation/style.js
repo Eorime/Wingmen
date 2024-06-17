@@ -5,10 +5,10 @@ export const Container = styled.div``;
 
 export const AdminNavigationContainer = styled.div`
   background-color: black;
-  height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  bottom: 0;
   width: 300px;
   display: flex;
   flex-direction: column;
