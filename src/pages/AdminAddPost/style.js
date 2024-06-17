@@ -22,3 +22,11 @@ export const TextArea = styled.textarea`
 export const Button = styled.button``;
 
 export const ErrorMessage = styled.p``;
+
+export const ImageContainer = styled.div``;
+
+export const ProjectImg = styled.img`
+  max-width: 100px;
+  max-height: 200px;
+  margin: 10px;
+`;

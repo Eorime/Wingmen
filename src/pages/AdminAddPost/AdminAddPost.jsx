@@ -7,10 +7,10 @@ import {
   FormGroup,
   Input,
   Label,
+  ProjectImg,
   TextArea,
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
-import { postData } from "../../api";
 
 const AdminAddPost = () => {
   const [formData, setFormData] = useState({
@@ -27,9 +27,11 @@ const AdminAddPost = () => {
     const { name, value, files } = e.target;
 
     if (name === "images") {
-      setFormData({ ...formData, images: files });
-    } else if (name === "video") {
-      setFormData({ ...formData, video: files[0] });
+      const imagesArray = Array.from(files);
+      setFormData({
+        ...formData,
+        images: [...formData.images, ...imagesArray],
+      });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -45,10 +47,6 @@ const AdminAddPost = () => {
 
     for (const image of formData.images) {
       formDataToSend.append("images", image);
-    }
-
-    if (formData.video) {
-      formDataToSend.append("video", formData.video);
     }
 
     try {
@@ -67,11 +65,16 @@ const AdminAddPost = () => {
         date: "",
         description: "",
         images: [],
-        video: null,
       });
     } catch (error) {
       setError("Couldn't create project");
     }
+  };
+
+  const handleRemoveImage = (index) => {
+    const updatedImages = [...formData.images];
+    updatedImages.splice(index, 1);
+    setFormData({ ...formData, images: updatedImages });
   };
 
   return (
@@ -117,19 +120,26 @@ const AdminAddPost = () => {
             onChange={handleChange}
           />
         </FormGroup>
-        <FormGroup>
-          <Label>Video:</Label>
-          <Input
-            type="file"
-            name="video"
-            accept="video/*"
-            onChange={handleChange}
-          />
-        </FormGroup>
         <Button type="submit">Create</Button>
       </Form>
       {error && <ErrorMessage>{error}</ErrorMessage>}
       {successMessage && <p>{successMessage}</p>}
+      <FormGroup>
+        {formData.images.length > 0 && (
+          <div>
+            <h2>Selected Images:</h2>
+            {formData.images.map((image, index) => (
+              <div key={index}>
+                <ProjectImg
+                  src={URL.createObjectURL(image)}
+                  alt={`Image ${index}`}
+                />
+                <Button onClick={() => handleRemoveImage(index)}>Remove</Button>
+              </div>
+            ))}
+          </div>
+        )}
+      </FormGroup>
     </Container>
   );
 };
