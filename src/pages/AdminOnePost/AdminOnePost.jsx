@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
 import {
   Container,
+  ImagesContainer,
   OneProjectContainer,
   ProjectDate,
   ProjectDescription,
+  ProjectImg,
   ProjectName,
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
@@ -50,6 +52,18 @@ const AdminOnePost = () => {
             <ProjectName>{projectData.name}</ProjectName>
             <ProjectDate>{projectData.date}</ProjectDate>
             <ProjectDescription>{projectData.description}</ProjectDescription>
+            <ImagesContainer>
+              {projectData.image && projectData.image.length > 0 ? (
+                projectData.image.map((img, index) => (
+                  <ProjectImg
+                    key={index}
+                    src={`data:image/jpeg;base64,${img}`}
+                  />
+                ))
+              ) : (
+                <p>No images available</p>
+              )}
+            </ImagesContainer>
             <button onClick={handleEditProject}>Edit Project</button>
           </OneProjectContainer>
         )

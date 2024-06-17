@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import {
   AllProjectsContainer,
   Container,
+  ImagesContainer,
   ProjectContainer,
   ProjectDate,
   ProjectDescription,
+  ProjectImg,
   ProjectName,
   ProjectsHeader,
 } from "./style";
@@ -73,6 +75,18 @@ const AdminPosts = () => {
                 <ProjectName>{project.name}</ProjectName>
                 <ProjectDate>{project.date}</ProjectDate>
                 <ProjectDescription>{project.description}</ProjectDescription>
+                <ImagesContainer>
+                  {project.image && project.image.length > 0 ? (
+                    project.image.map((img, index) => (
+                      <ProjectImg
+                        key={index}
+                        src={`data:image/jpeg;base64,${img}`}
+                      />
+                    ))
+                  ) : (
+                    <p>No images available</p>
+                  )}
+                </ImagesContainer>
                 <button onClick={() => handleViewProject(project._id)}>
                   See Project
                 </button>

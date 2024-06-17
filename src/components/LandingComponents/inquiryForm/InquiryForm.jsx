@@ -50,7 +50,7 @@ const InquiryForm = () => {
     }
 
     if (countWords(inquiry) > 200) {
-      setError("Inquiry cannot exceed 200 words");
+      setError("Inquiry can not exceed 200 words");
       return;
     }
 

@@ -18,6 +18,8 @@ const AdminEditPost = () => {
     name: "",
     date: "",
     description: "",
+    images: [],
+    video: null,
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -27,7 +29,7 @@ const AdminEditPost = () => {
       try {
         const response = await fetch(`http://localhost:5000/projects/${id}`);
         const data = await response.json();
-        setFormData(data);
+        setFormData({ ...data, images: [], video: null });
       } catch (error) {
         setError("Failed to fetch project data");
       } finally {
@@ -39,26 +41,52 @@ const AdminEditPost = () => {
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+    const { name, value, files } = e.target;
+
+    if (name === "images") {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        images: files,
+      }));
+    } else if (name === "video") {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        video: files[0],
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("date", formData.date);
+    formDataToSend.append("description", formData.description);
+
+    for (const image of formData.images) {
+      formDataToSend.append("images", image);
+    }
+
+    if (formData.video) {
+      formDataToSend.append("video", formData.video);
+    }
+
     try {
       const response = await fetch(`http://localhost:5000/projects/${id}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
+
       if (!response.ok) {
         throw new Error("Failed to update project");
       }
+
       navigate(`/projects/${id}`);
     } catch (error) {
       setError(error.message);
@@ -79,6 +107,7 @@ const AdminEditPost = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              required
             />
           </FormGroup>
           <FormGroup>
@@ -88,6 +117,7 @@ const AdminEditPost = () => {
               name="date"
               value={formData.date}
               onChange={handleChange}
+              required
             />
           </FormGroup>
           <FormGroup>
@@ -95,6 +125,26 @@ const AdminEditPost = () => {
             <TextArea
               name="description"
               value={formData.description}
+              onChange={handleChange}
+              required
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label>Images</Label>
+            <Input
+              type="file"
+              name="images"
+              multiple
+              accept="image/*"
+              onChange={handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label>Video</Label>
+            <Input
+              type="file"
+              name="video"
+              accept="video/*"
               onChange={handleChange}
             />
           </FormGroup>
