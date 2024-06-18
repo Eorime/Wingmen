@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
+  Button,
   Container,
+  ErrorMessage,
   Form,
   FormGroup,
   Input,
   Label,
-  SaveButton,
+  ProjectImg,
   TextArea,
 } from "./style";
 import AdminNavigation from "../../components/adminComponents/adminNavigation/AdminNavigation";
@@ -23,15 +25,23 @@ const AdminEditPost = () => {
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
         const response = await fetch(`http://localhost:5000/projects/${id}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error status: ${response.status}`);
+        }
         const data = await response.json();
-        setFormData({ ...data, images: [], video: null });
+        setFormData({
+          ...data,
+          images: data.image.map((imageUrl) => ({ src: imageUrl, file: null })), // Existing images
+          video: null,
+        });
       } catch (error) {
-        setError("Failed to fetch project data");
+        setError(`Failed to fetch project data: ${error.message}`);
       } finally {
         setLoading(false);
       }
@@ -44,9 +54,13 @@ const AdminEditPost = () => {
     const { name, value, files } = e.target;
 
     if (name === "images") {
+      const imagesArray = Array.from(files).map((file) => ({
+        src: URL.createObjectURL(file),
+        file,
+      }));
       setFormData((prevFormData) => ({
         ...prevFormData,
-        images: files,
+        images: [...prevFormData.images, ...imagesArray],
       }));
     } else if (name === "video") {
       setFormData((prevFormData) => ({
@@ -69,9 +83,11 @@ const AdminEditPost = () => {
     formDataToSend.append("date", formData.date);
     formDataToSend.append("description", formData.description);
 
-    for (const image of formData.images) {
-      formDataToSend.append("images", image);
-    }
+    formData.images.forEach((image) => {
+      if (image.file) {
+        formDataToSend.append("images", image.file);
+      }
+    });
 
     if (formData.video) {
       formDataToSend.append("video", formData.video);
@@ -87,10 +103,18 @@ const AdminEditPost = () => {
         throw new Error("Failed to update project");
       }
 
+      setSuccessMessage("Project updated successfully");
       navigate(`/projects/${id}`);
     } catch (error) {
-      setError(error.message);
+      setError(`Failed to update project: ${error.message}`);
     }
+  };
+
+  const handleRemoveImage = (index) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      images: prevFormData.images.filter((_, i) => i !== index),
+    }));
   };
 
   return (
@@ -139,17 +163,24 @@ const AdminEditPost = () => {
               onChange={handleChange}
             />
           </FormGroup>
+          <Button type="submit">Save</Button>
+          {error && <ErrorMessage>{error}</ErrorMessage>}
+          {successMessage && <p>{successMessage}</p>}
           <FormGroup>
-            <Label>Video</Label>
-            <Input
-              type="file"
-              name="video"
-              accept="video/*"
-              onChange={handleChange}
-            />
+            {formData.images.length > 0 && (
+              <div>
+                <h2>Selected Images:</h2>
+                {formData.images.map((image, index) => (
+                  <div key={index}>
+                    <ProjectImg src={image.src} alt={`Image ${index}`} />
+                    <Button onClick={() => handleRemoveImage(index)}>
+                      Remove
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            )}
           </FormGroup>
-          <SaveButton type="submit">Save</SaveButton>
-          {error && <p style={{ color: "red" }}>{error}</p>}
         </Form>
       )}
     </Container>
