@@ -8,13 +8,14 @@ export const Container = styled.div`
   position: fixed;
   left: 0px;
   top: 0px;
+  z-index: 2;
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 18px;
-  padding-left: 340px;
+  padding-left: 210px;
 `;
 
 export const StyledLink = styled(Link)`

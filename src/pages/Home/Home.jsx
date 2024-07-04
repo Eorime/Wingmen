@@ -4,7 +4,6 @@ import { Element } from "react-scroll";
 import TickerTape from "../../components/LandingComponents/tickerTape/TickerTape";
 import Description from "../../components/LandingComponents/description/Description";
 import WhatsAppContact from "../../components/LandingComponents/whatsAppContact/WhatsAppContact";
-import Work from "../../components/LandingComponents/work/Work";
 import Contact from "../../components/LandingComponents/contact/Contact";
 import Services from "../../components/LandingComponents/services/Services";
 import { Container } from "./style";
@@ -25,9 +24,6 @@ const Home = () => {
       <MotionContainer />
       <Element name="whatsAppContact">
         <WhatsAppContact />
-      </Element>
-      <Element name="work">
-        <Work />
       </Element>
       <Element name="services">
         <Services />

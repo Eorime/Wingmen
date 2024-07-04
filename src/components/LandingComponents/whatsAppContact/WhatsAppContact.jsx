@@ -12,7 +12,8 @@ const WhatsAppContact = () => {
     <Container>
       <WhatsAppContainerStyle>
         <WhatsAppLogo src={WALogo} />
-        <StyledLink href="http://wa.me/995599783532" target="_blank">
+        <StyledLink as="a" href="http://wa.me/995599783532" target="_blank">
+          {" "}
           WhatsApp
         </StyledLink>
       </WhatsAppContainerStyle>

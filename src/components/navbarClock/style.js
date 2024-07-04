@@ -28,7 +28,7 @@ export const ClockFace = styled.div`
 export const ClockHand = styled.div`
   position: absolute;
   top: 51%;
-  left: 45%;
+  left: 52%;
   transform-origin: center bottom;
   background: #000000;
 `;
