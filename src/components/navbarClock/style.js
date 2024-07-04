@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const ClockContainer = styled.div`
   position: absolute;
-  margin-top: 13px;
+  top: 35px;
   right: 233px;
 `;
 
@@ -23,25 +23,26 @@ export const ClockFace = styled.div`
   border: solid 1px #000000;
   border-radius: 50%;
   position: relative;
-  animation: ${rotate} infinite;
 `;
 
 export const ClockHand = styled.div`
   position: absolute;
-  bottom: 50%;
-  top: 50%;
-  transform-origin: 50% 100%;
+  top: 51%;
+  left: 45%;
+  transform-origin: center bottom;
   background: #000000;
 `;
 
 export const HourHand = styled(ClockHand)`
-  width: 10px;
-  height: 1px;
-  transform: ${(props) => `translateX(-50%) rotate(${props.rotation}deg)`};
+  width: 1px;
+  height: 6px;
+  transform: ${(props) =>
+    `translate(-50%, -100%) rotate(${props.rotation}deg)`};
 `;
 
 export const MinuteHand = styled(ClockHand)`
-  width: 15px;
-  height: 1px;
-  transform: ${(props) => `translateX(-50%) rotate(${props.rotation}deg)`};
+  width: 1px;
+  height: 7px;
+  transform: ${(props) =>
+    `translate(-50%, -100%) rotate(${props.rotation}deg)`};
 `;
