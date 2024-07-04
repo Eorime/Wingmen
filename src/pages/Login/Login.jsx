@@ -9,7 +9,7 @@ import {
   LoginLogo,
   LogoContainer,
 } from "./style";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "../../assets/images/logos/Logo.png";
 import { useNavigate } from "react-router-dom";
 import { postData } from "../../api";
 import { useAuth } from "../../context/AuthContextProvider";

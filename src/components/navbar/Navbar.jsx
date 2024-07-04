@@ -9,7 +9,7 @@ import {
   NavClockZone,
   StyledLink,
 } from "./style";
-import LogoNew from "../../assets/images/wingmen_new_logo-15.png";
+import LogoNew from "../../assets/images/logos/wingmen_new_logo-15.png";
 import NavbarClock from "../navbarClock/NavbarClock";
 
 const Navbar = () => {

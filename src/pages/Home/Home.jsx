@@ -10,6 +10,7 @@ import Services from "../../components/LandingComponents/services/Services";
 import { Container } from "./style";
 import Footer from "../../components/footer/Footer";
 import InquiryForm from "../../components/LandingComponents/inquiryForm/InquiryForm";
+import MotionContainer from "../../components/LandingComponents/motionContainer/MotionContainer";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Element name="description">
         <Description />
       </Element>
+      <MotionContainer />
       <Element name="whatsAppContact">
         <WhatsAppContact />
       </Element>

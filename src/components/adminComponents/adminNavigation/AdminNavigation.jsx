@@ -8,7 +8,7 @@ import {
   LogOutButton,
   StyledLink,
 } from "./style";
-import Logo from "../../../assets/images/Logo.png";
+import Logo from "../../../assets/images/logos/Logo.png";
 import { routes } from "../../../constants/routes";
 import { useAuth } from "../../../context/AuthContextProvider";
 

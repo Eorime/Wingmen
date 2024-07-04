@@ -10,6 +10,7 @@ export const Container = styled.div`
   height: 63px;
   bottom: 0;
   background-color: #171717;
+  padding-top: 5px;
 `;
 
 const tickerScroll = keyframes`
@@ -22,7 +23,7 @@ const tickerScroll = keyframes`
 `;
 
 export const TickerText = styled.p`
-  margin-top: 13px;
+  margin-top: -5px;
   font-family: "NexaRegular", sans-serif;
   display: inline-block;
   font-size: 40px;
@@ -32,8 +33,8 @@ export const TickerText = styled.p`
 `;
 
 export const TickerImg = styled.img`
-  width: 50px;
-  height: 29px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 120px;
+  margin-bottom: -35px;
+  margin-top: -10px;
+  height: auto;
 `;
