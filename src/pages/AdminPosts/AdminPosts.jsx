@@ -25,7 +25,6 @@ const AdminPosts = () => {
       try {
         const response = await fetchData("http://localhost:5000/projects");
         setPostsData(response);
-        console.log(response);
       } catch (error) {
         setError(error.message);
       } finally {

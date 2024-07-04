@@ -1,10 +1,20 @@
 @font-face {
-  font-family: "FHWA";
-  src: url("../src/assets/fonts/fhwa-series-e-2020-font/Fhwaseriese2020minus50-RpZyM.otf")
-    format("opentype");
+  font-family: "NexaRegular";
+  src: url("../src/assets/fonts/mainFonts/NEXA\ REGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "NexaLight";
+  src: url("../src/assets/fonts/mainFonts/NEXA-EXTRALIGHT.TTF")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "NexaHeavy";
+  src: url("../src/assets/fonts/mainFonts/NEXA-HEAVY.TTF") format("opentype");
 }
 
 body {
   background-color: #ffffff;
-  font-family: "FHWA", Arial, Helvetica, sans-serif;
+  font-family: "NexaRegular", Arial, Helvetica, sans-serif;
 }
