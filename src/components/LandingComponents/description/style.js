@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  font-size: 48px;
-  position: relative;
-  top: 500px;
-  left: 120px;
-  z-index: -1;
-`;
+export const Container = styled.div``;
+
+export const DescriptionContainer = styled.div``;
+
+export const DescriptionHeader = styled.h1``;
+
+export const DescriptionSubHeader = styled.p``;
+
+export const DescriptionText = styled.p``;

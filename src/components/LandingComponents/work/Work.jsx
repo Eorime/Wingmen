@@ -1,20 +1,11 @@
 import React from "react";
-import { Container, MoreButton, WorkHead, WorksContainer } from "./style";
-import { useNavigate } from "react-router-dom";
+import { Container, WorkHead, WorksContainer } from "./style";
 
 const Work = () => {
-  const navigate = useNavigate();
-
-  const handleMoreButton = function () {
-    navigate("/work");
-  };
-
   return (
     <Container>
-      COMPANIES WE'VE WORKED WITH
-      <WorkHead>WORK</WorkHead>
+      <WorkHead></WorkHead>
       <WorksContainer></WorksContainer>
-      <MoreButton onClick={handleMoreButton}>MORE</MoreButton>
     </Container>
   );
 };
