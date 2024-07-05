@@ -6,7 +6,7 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 140px;
-  margin-left: 213px;
+  margin-left: 200px;
 `;
 
 export const DescriptionHeader = styled.h1`
