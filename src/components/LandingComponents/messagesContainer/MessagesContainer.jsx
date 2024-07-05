@@ -11,14 +11,10 @@ const MessagesContainer = () => {
     <Container>
       <MessagesContainerStyle>
         <OneMessageContainer>
-          <MessageText>
-            ooh fancy pants rich mcgill over here, fuck you
-          </MessageText>
+          <MessageText>WANNA HAVE A COOL MOTION VID????? </MessageText>
         </OneMessageContainer>
         <OneMessageContainer>
-          <MessageText>
-            ooh fancy pants rich mcgill over here, fuck you
-          </MessageText>
+          <MessageText>mesiji var magary da very fun </MessageText>
         </OneMessageContainer>
       </MessagesContainerStyle>
     </Container>
