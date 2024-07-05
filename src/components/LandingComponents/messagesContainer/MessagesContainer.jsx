@@ -1,7 +1,12 @@
 import React from "react";
+import { Container, MessagesContainerStyle } from "./style";
 
 const MessagesContainer = () => {
-  return <div>MessagesContainer</div>;
+  return (
+    <Container>
+      <MessagesContainerStyle></MessagesContainerStyle>
+    </Container>
+  );
 };
 
 export default MessagesContainer;

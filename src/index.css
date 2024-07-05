@@ -22,5 +22,6 @@
 
 body {
   background-color: #ffffff;
+  overflow-x: hidden;
   font-family: "NexaRegular", Arial, Helvetica, sans-serif;
 }

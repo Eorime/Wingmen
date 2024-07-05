@@ -4,8 +4,12 @@ import {
   DescriptionContainer,
   DescriptionHeader,
   DescriptionIcon,
+  DescriptionLineOne,
+  DescriptionLineThree,
+  DescriptionLineTwo,
   DescriptionSubHeader,
   DescriptionText,
+  M19,
 } from "./style";
 import DescripIcon from "../../../assets/images/icons/TapeIcon.png";
 
@@ -22,6 +26,10 @@ const Description = () => {
           the side.
         </DescriptionText>
       </DescriptionContainer>
+      <DescriptionLineOne />
+      <DescriptionLineTwo />
+      <DescriptionLineThree />
+      <M19>M-19</M19>
     </Container>
   );
 };

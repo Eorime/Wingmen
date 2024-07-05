@@ -38,3 +38,40 @@ export const DescriptionIcon = styled.img`
   top: 230px;
   left: 825px;
 `;
+
+export const DescriptionLineOne = styled.div`
+  height: 560px;
+  width: 1px;
+  position: absolute;
+  left: 73px;
+  top: 190px;
+  background-color: #000000;
+`;
+
+export const DescriptionLineTwo = styled.div`
+  height: 170px;
+  width: 1px;
+  position: absolute;
+  left: 73px;
+  top: 800px;
+  background-color: #000000;
+`;
+
+export const DescriptionLineThree = styled.div`
+  height: 1px;
+  width: 230px;
+  position: absolute;
+  left: 74px;
+  top: 969px;
+  background-color: #000000;
+`;
+
+export const M19 = styled.p`
+  font-family: "FHWA", sans-serif;
+  font-size: 13px;
+  transform: rotate(270deg);
+  position: absolute;
+  left: 45px;
+  top: 705px;
+  color: #000000;
+`;

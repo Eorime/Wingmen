@@ -10,21 +10,17 @@ import { Container } from "./style";
 import Footer from "../../components/footer/Footer";
 import InquiryForm from "../../components/LandingComponents/inquiryForm/InquiryForm";
 import MotionContainer from "../../components/LandingComponents/motionContainer/MotionContainer";
+import MessagesContainer from "../../components/LandingComponents/messagesContainer/MessagesContainer";
 
 const Home = () => {
   return (
     <Container>
       <Navbar />
-      <Element name="home">
-        <TickerTape />
-      </Element>
-      <Element name="description">
-        <Description />
-      </Element>
+      <TickerTape />
+      <Description />
       <MotionContainer />
-      <Element name="whatsAppContact">
-        <WhatsAppContact />
-      </Element>
+      <WhatsAppContact />
+      <MessagesContainer />
       <Element name="services">
         <Services />
       </Element>

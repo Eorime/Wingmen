@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 90px;
-  background-color: #e8e7e2;
+  background-color: #cecac146;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -60,4 +60,5 @@ export const Logo = styled.img`
   position: absolute;
   top: 3px;
   left: 70px;
+  cursor: pointer;
 `;
