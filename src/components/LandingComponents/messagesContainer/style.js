@@ -6,9 +6,8 @@ export const MessagesContainerStyle = styled.div`
   min-height: 100%;
   background-color: #cecac146;
   width: 265px;
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 0px;
-  bottom: 0px;
   z-index: -3;
 `;

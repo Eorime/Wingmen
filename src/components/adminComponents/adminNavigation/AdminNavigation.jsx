@@ -39,6 +39,12 @@ const AdminNavigation = () => {
         <StyledLink to={routes.addPost}>
           <AdminElement>ADD PROJECT</AdminElement>
         </StyledLink>
+        <StyledLink to={routes.messages}>
+          <AdminElement>MESSAGES</AdminElement>
+        </StyledLink>
+        <StyledLink to={routes.addMessage}>
+          <AdminElement>ADD MESSAGE</AdminElement>
+        </StyledLink>
         <LogOutButton onClick={handleLogOut}>LOG OUT</LogOutButton>
       </AdminNavigationContainer>
     </Container>

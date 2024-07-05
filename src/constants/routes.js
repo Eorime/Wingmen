@@ -6,6 +6,8 @@ const adminPosts = `${admin}/projects`;
 const addPost = `${admin}/addProject`;
 const adminOnePost = `projects/:id`;
 const editProject = `projects/:id/edit`;
+const messages = `${admin}/messages`;
+const addMessage = `${admin}/addMessage`;
 const login = "/login";
 
 export const routes = {
@@ -18,4 +20,6 @@ export const routes = {
   adminOnePost,
   editProject,
   login,
+  messages,
+  addMessage,
 };
