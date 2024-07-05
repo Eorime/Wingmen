@@ -15,6 +15,11 @@ const MessagesContainer = () => {
             ooh fancy pants rich mcgill over here, fuck you
           </MessageText>
         </OneMessageContainer>
+        <OneMessageContainer>
+          <MessageText>
+            ooh fancy pants rich mcgill over here, fuck you
+          </MessageText>
+        </OneMessageContainer>
       </MessagesContainerStyle>
     </Container>
   );

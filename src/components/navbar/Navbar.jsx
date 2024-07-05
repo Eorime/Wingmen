@@ -4,6 +4,7 @@ import {
   Logo,
   NavbarContainer,
   NavbarElement,
+  NavbarLine,
   NavClock,
   NavClockContainer,
   NavClockZone,
@@ -57,6 +58,7 @@ const Navbar = () => {
           <NavClock>{timeFormat(time)}</NavClock>
           <NavClockZone>Tbilisi</NavClockZone>
         </NavClockContainer>
+        <NavbarLine />
       </NavbarContainer>
     </Container>
   );

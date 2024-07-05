@@ -5,7 +5,7 @@ export const Container = styled.div``;
 export const ClockContainer = styled.div`
   position: absolute;
   top: 35px;
-  right: 233px;
+  right: 245px;
 `;
 
 const rotate = keyframes`

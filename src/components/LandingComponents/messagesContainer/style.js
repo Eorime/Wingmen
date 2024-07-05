@@ -4,28 +4,30 @@ export const Container = styled.div``;
 
 export const MessagesContainerStyle = styled.div`
   min-height: 100%;
-  background-color: #cecac146;
+  background-color: transparent;
   width: 265px;
   position: fixed;
   right: 0px;
-  top: 0px;
-  z-index: -3;
+  top: -93px;
+  z-index: 2;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
 `;
 
 export const OneMessageContainer = styled.div`
   height: auto;
-  width: 205px;
+  width: 215px;
   padding-left: 6px;
-  margin-left: 35px;
-  background-color: white;
-  margin-top: 180px;
-  gap: 27px;
-  border: 1px solid #aeaeae;
-  position: absolute;
+  margin-left: 0px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  backdrop-filter: blur(20px);
 `;
 
 export const MessageText = styled.p`
-  max-width: 120px;
+  max-width: 160px;
   font-family: "NexaRegular";
-  font-size: 11px;
+  font-size: 16px;
 `;

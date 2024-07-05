@@ -4,11 +4,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 90px;
-  background-color: #cecac146;
+  background-color: transparent;
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 2;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 `;
 
 export const NavbarContainer = styled.div`
@@ -29,7 +32,7 @@ export const StyledLink = styled(Link)`
 
 export const NavbarElement = styled.p`
   font-size: 18px;
-  margin-right: 138px;
+  margin-right: 175px;
 `;
 
 export const NavClockContainer = styled.div`
@@ -41,19 +44,15 @@ export const NavClockContainer = styled.div`
 export const NavClock = styled.p`
   font-size: 16px;
   position: absolute;
-  right: 155px;
+  right: 165px;
 `;
 
 export const NavClockZone = styled.p`
   font-size: 16px;
   position: absolute;
   margin-left: 115px;
-  right: 55px;
+  right: 44px;
 `;
-
-export const NavbarContact = styled.p``;
-
-export const NavbarServices = styled.p``;
 
 export const Logo = styled.img`
   width: 100px;
@@ -61,4 +60,14 @@ export const Logo = styled.img`
   top: 3px;
   left: 70px;
   cursor: pointer;
+`;
+
+export const NavbarLine = styled.div`
+  width: 73%;
+  height: 1px;
+  position: absolute;
+  background-color: #000000;
+  left: 210px;
+  bottom: 0;
+  z-index: 3;
 `;
