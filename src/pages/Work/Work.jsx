@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <Container>
       <WorkContainer>
-        <WorkHeader>WORK</WorkHeader>
+        <WorkHeader id="work">WORK</WorkHeader>
         <WorkIcon src={WorkImg} />
         <WorkCarousel />
       </WorkContainer>
