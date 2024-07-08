@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  Container,
-  ServicesLandingContainer,
-  ServicesLandingHeader,
-} from "./style";
+import { Container, ServicesLandingContainer } from "./style";
+import ServicesTicker from "../../components/LandingComponents/servicesLandingTickerTape/ServicesTicker";
 
 const ServicesLanding = () => {
   return (
     <Container>
       <ServicesLandingContainer id="servicesLanding">
-        <ServicesLandingHeader>SERVICES</ServicesLandingHeader>
+        <ServicesTicker></ServicesTicker>
       </ServicesLandingContainer>
     </Container>
   );
