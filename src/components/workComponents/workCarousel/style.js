@@ -1,32 +1,34 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1600px;
+  max-width: 1500px;
   margin: auto;
   position: relative;
   top: 900px;
-  left: 70px;
+  left: -110px;
 `;
 
 export const WorkCarouselContainer = styled.div`
   display: flex;
   overflow: hidden;
+  flex-direction: row;
+  gap: 40px;
 `;
 
 export const WorkContainer = styled.div`
-  flex: 0 0 100%;
   transition: transform 0.8s ease;
   transform: translateX(${(props) => props.offset}%);
 `;
 
 export const WorkTitle = styled.p`
   text-align: center;
-  margin-top: 10px;
+  margin-left: -650px;
+  margin-top: 40px;
 `;
 
 export const WorkImage = styled.img`
-  width: 764px;
-  height: 954px;
+  width: 750px;
+  height: 940px;
 `;
 
 const Button = styled.button`

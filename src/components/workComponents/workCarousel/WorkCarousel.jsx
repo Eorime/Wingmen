@@ -42,7 +42,7 @@ const WorkCarousel = () => {
     <Container>
       <WorkCarouselContainer>
         {slides.map((slide, index) => (
-          <WorkContainer key={index} offset={100 * (index - currentIndex)}>
+          <WorkContainer>
             <WorkImage src={slide.image} alt={slide.title} />
             <WorkTitle>{slide.title}</WorkTitle>
           </WorkContainer>

@@ -8,7 +8,7 @@ export const WorkHeader = styled.h1`
   font-size: 125px;
   font-family: "NexaBold", sans-serif;
   position: absolute;
-  left: 200px;
+  left: 90px;
   top: 1130px;
   color: #0600ff;
 `;
@@ -17,8 +17,8 @@ export const WorkIcon = styled.img`
   width: 45px;
   height: 41px;
   position: absolute;
-  top: 1280px;
-  left: 625px;
+  top: 1282px;
+  left: 510px;
 `;
 
 export const WorkLine = styled.div``;
