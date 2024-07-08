@@ -13,7 +13,7 @@ import Work from "../Work/Work";
 
 const Home = () => {
   return (
-    <Container>
+    <Container id="home">
       <Navbar />
       <TickerTape />
       <Description />

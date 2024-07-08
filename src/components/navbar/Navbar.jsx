@@ -40,7 +40,9 @@ const Navbar = () => {
   return (
     <Container>
       <NavbarContainer>
-        <Logo src={LogoNew} />
+        <StyledLink to="home" smooth={true} duration={600}>
+          <Logo src={LogoNew} />
+        </StyledLink>
         <StyledLink to="work" smooth={true} duration={600}>
           {" "}
           <NavbarElement>WORK</NavbarElement>
