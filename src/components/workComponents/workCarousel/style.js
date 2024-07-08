@@ -5,14 +5,13 @@ export const Container = styled.div`
   margin: auto;
   position: relative;
   top: 900px;
-  left: -110px;
+  left: -120px;
 `;
 
 export const WorkCarouselContainer = styled.div`
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  gap: 40px;
 `;
 
 export const WorkContainer = styled.div`
@@ -33,19 +32,22 @@ export const WorkImage = styled.img`
 
 const Button = styled.button`
   position: absolute;
-  top: 50%;
+  top: -10%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: transparent;
+  color: #000000;
   border: none;
+  font-size: 100px;
   padding: 10px;
   cursor: pointer;
+  font-family: "NexaLight", sans-serif;
+  font-weight: 100;
 `;
 
 export const PrevButton = styled(Button)`
-  left: 10px;
+  right: 15%;
 `;
 
 export const NextButton = styled(Button)`
-  right: 10px;
+  right: 8%;
 `;

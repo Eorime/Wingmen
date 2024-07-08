@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   NextButton,
@@ -8,8 +8,6 @@ import {
   WorkImage,
   WorkTitle,
 } from "./style";
-import { useEffect } from "react";
-import { useState } from "react";
 import ImageCarousel from "../../../assets/image (17).png";
 import ImageCarousel2 from "../../../assets/image (17).png";
 import ImageCarousel3 from "../../../assets/image (17).png";
@@ -42,7 +40,7 @@ const WorkCarousel = () => {
     <Container>
       <WorkCarouselContainer>
         {slides.map((slide, index) => (
-          <WorkContainer>
+          <WorkContainer key={index} offset={(index - currentIndex) * 5}>
             <WorkImage src={slide.image} alt={slide.title} />
             <WorkTitle>{slide.title}</WorkTitle>
           </WorkContainer>
