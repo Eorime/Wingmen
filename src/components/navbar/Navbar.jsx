@@ -47,7 +47,7 @@ const Navbar = () => {
           {" "}
           <NavbarElement>WORK</NavbarElement>
         </StyledLink>
-        <StyledLink>
+        <StyledLink to="servicesLanding" smooth={true} duration={600}>
           {" "}
           <NavbarElement>SERVICES</NavbarElement>
         </StyledLink>

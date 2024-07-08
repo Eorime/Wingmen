@@ -21,7 +21,7 @@ export const WorkContainer = styled.div`
 
 export const WorkTitle = styled.p`
   text-align: center;
-  margin-left: -650px;
+  margin-left: -590px;
   margin-top: 40px;
 `;
 

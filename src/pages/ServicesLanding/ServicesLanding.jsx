@@ -1,11 +1,16 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import { Container } from "./style";
+import {
+  Container,
+  ServicesLandingContainer,
+  ServicesLandingHeader,
+} from "./style";
 
 const ServicesLanding = () => {
   return (
     <Container>
-      <Navbar />
+      <ServicesLandingContainer id="servicesLanding">
+        <ServicesLandingHeader>SERVICES</ServicesLandingHeader>
+      </ServicesLandingContainer>
     </Container>
   );
 };

@@ -10,6 +10,7 @@ import InquiryForm from "../../components/LandingComponents/inquiryForm/InquiryF
 import MotionContainer from "../../components/LandingComponents/motionContainer/MotionContainer";
 import MessagesContainer from "../../components/LandingComponents/messagesContainer/MessagesContainer";
 import Work from "../Work/Work";
+import ServicesLanding from "../ServicesLanding/ServicesLanding";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <WhatsAppContact />
       <MessagesContainer />
       <Work />
+      <ServicesLanding />
       <Contact />
       <InquiryForm />
       <Footer />
