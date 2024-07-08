@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  ButtonImage,
   Container,
   NextButton,
   PrevButton,
@@ -11,6 +12,8 @@ import {
 import ImageCarousel from "../../../assets/image (17).png";
 import ImageCarousel2 from "../../../assets/image (17).png";
 import ImageCarousel3 from "../../../assets/image (17).png";
+import LeftButton from "../../../assets/images/icons/carouselButtons/leftArrow.png";
+import RightButton from "../../../assets/images/icons/carouselButtons/rightArrow.png";
 
 const WorkCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,8 +49,13 @@ const WorkCarousel = () => {
           </WorkContainer>
         ))}
       </WorkCarouselContainer>
-      <PrevButton onClick={prevSlide}>&lt;</PrevButton>
-      <NextButton onClick={nextSlide}>&gt;</NextButton>
+      <PrevButton onClick={prevSlide}>
+        <ButtonImage src={LeftButton} />
+      </PrevButton>
+      <NextButton onClick={nextSlide}>
+        {" "}
+        <ButtonImage src={RightButton} />
+      </NextButton>
     </Container>
   );
 };

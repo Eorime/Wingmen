@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 1500px;
   margin: auto;
   position: relative;
-  top: 900px;
+  top: 830px;
   left: -120px;
 `;
 
@@ -26,28 +26,29 @@ export const WorkTitle = styled.p`
 `;
 
 export const WorkImage = styled.img`
-  width: 750px;
-  height: 940px;
+  width: 650px;
+  height: 650px;
 `;
 
 const Button = styled.button`
   position: absolute;
-  top: -10%;
+  top: -20.2%;
   transform: translateY(-50%);
   background-color: transparent;
-  color: #000000;
+  color: transparent;
   border: none;
-  font-size: 100px;
-  padding: 10px;
   cursor: pointer;
-  font-family: "NexaLight", sans-serif;
-  font-weight: 100;
+`;
+
+export const ButtonImage = styled.img`
+  width: 65px;
+  height: 90px;
 `;
 
 export const PrevButton = styled(Button)`
-  right: 15%;
+  left: 32%;
 `;
 
 export const NextButton = styled(Button)`
-  right: 8%;
+  left: 40%;
 `;
