@@ -28,10 +28,9 @@ export const TickerText = styled.p`
   font-family: "NexaRegular", sans-serif;
   display: inline-block;
   font-size: 96px;
-  animation: ${tickerScroll} 50s linear infinite;
+  animation: ${tickerScroll} 20s linear infinite;
   animation-fill-mode: both;
   color: #000000;
-  margin-left: -2px;
 `;
 
 export const TickerImg = styled.img`
