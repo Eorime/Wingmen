@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const WorkCarouselContainer = styled.div`
   display: flex;
   overflow: hidden;
+  gap: 30px;
   flex-direction: row;
 `;
 

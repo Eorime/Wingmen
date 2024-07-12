@@ -43,7 +43,7 @@ const WorkCarousel = () => {
     <Container>
       <WorkCarouselContainer>
         {slides.map((slide, index) => (
-          <WorkContainer key={index} offset={(index - currentIndex) * 5}>
+          <WorkContainer key={index} offset={-currentIndex * 20}>
             <WorkImage src={slide.image} alt={slide.title} />
             <WorkTitle>{slide.title}</WorkTitle>
           </WorkContainer>
@@ -53,7 +53,6 @@ const WorkCarousel = () => {
         <ButtonImage src={LeftButton} />
       </PrevButton>
       <NextButton onClick={nextSlide}>
-        {" "}
         <ButtonImage src={RightButton} />
       </NextButton>
     </Container>
