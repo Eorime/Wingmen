@@ -9,14 +9,14 @@ import {
 const MessagesContainer = () => {
   return (
     <Container>
-      <MessagesContainerStyle>
-        <OneMessageContainer>
-          <MessageText>WANNA HAVE A COOL MOTION VID????? </MessageText>
-        </OneMessageContainer>
-        <OneMessageContainer>
+      {/* <MessagesContainerStyle> */}
+      <OneMessageContainer>
+        <MessageText>WANNA HAVE A COOL MOTION VID????? </MessageText>
+      </OneMessageContainer>
+      {/* <OneMessageContainer>
           <MessageText>mesiji var magary da very fun </MessageText>
-        </OneMessageContainer>
-      </MessagesContainerStyle>
+        </OneMessageContainer> */}
+      {/* </MessagesContainerStyle> */}
     </Container>
   );
 };
