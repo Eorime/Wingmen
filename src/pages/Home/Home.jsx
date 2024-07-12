@@ -11,6 +11,7 @@ import MotionContainer from "../../components/LandingComponents/motionContainer/
 import MessagesContainer from "../../components/LandingComponents/messagesContainer/MessagesContainer";
 import Work from "../Work/Work";
 import ServicesLanding from "../ServicesLanding/ServicesLanding";
+import StickyMessage from "../../components/LandingComponents/stickyMessage/StickyMessage";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <WhatsAppContact />
       <MessagesContainer />
       <Work />
+      <StickyMessage />
       <ServicesLanding />
       <Contact />
       <InquiryForm />
