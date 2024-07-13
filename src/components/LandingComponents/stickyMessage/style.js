@@ -5,7 +5,6 @@ export const Container = styled.div``;
 export const StickyMessageContainer = styled.div`
   height: auto;
   width: 215px;
-  position: sticky;
   right: 20px;
   z-index: 10;
   background-color: transparent;
