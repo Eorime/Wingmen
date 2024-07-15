@@ -63,7 +63,7 @@ export const Logo = styled.img`
 `;
 
 export const NavbarLine = styled.div`
-  width: 73%;
+  width: 1380px;
   height: 1px;
   position: absolute;
   background-color: #000000;
