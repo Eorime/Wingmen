@@ -1,55 +1,48 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1500px;
+  width: 80%;
   margin: auto;
-  position: relative;
-  top: 830px;
-  left: -120px;
 `;
 
 export const WorkCarouselContainer = styled.div`
-  display: flex;
-  overflow: hidden;
-  gap: 30px;
-  flex-direction: row;
+  position: relative;
 `;
 
 export const WorkContainer = styled.div`
-  transition: transform 0.8s ease;
-  transform: translateX(${(props) => props.offset}%);
-`;
-
-export const WorkTitle = styled.p`
-  text-align: center;
-  margin-left: -590px;
-  margin-top: 40px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const WorkImage = styled.img`
-  width: 650px;
-  height: 650px;
+  width: 100%;
+  height: auto;
 `;
 
-const Button = styled.button`
-  position: absolute;
-  top: -20.2%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  cursor: pointer;
+export const WorkTitle = styled.h3`
+  margin-top: 10px;
 `;
 
 export const ButtonImage = styled.img`
-  width: 65px;
-  height: 90px;
+  width: 20px;
+  height: 20px;
 `;
 
-export const PrevButton = styled(Button)`
-  left: 32%;
+export const PrevButton = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
 `;
 
-export const NextButton = styled(Button)`
-  left: 40%;
+export const NextButton = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
 `;
