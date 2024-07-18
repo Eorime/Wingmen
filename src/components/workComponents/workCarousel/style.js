@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import Slider from "react-slick";
 
 export const Container = styled.div`
   width: 80%;
   margin: auto;
+  position: absolute;
 `;
 
 export const WorkCarouselContainer = styled.div`
@@ -25,9 +27,11 @@ export const WorkTitle = styled.h3`
 `;
 
 export const ButtonImage = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 65px;
+  height: 90px;
 `;
+
+export const ButtonsContainer = styled.div``;
 
 export const PrevButton = styled.div`
   position: absolute;
@@ -35,7 +39,7 @@ export const PrevButton = styled.div`
   left: 0;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const NextButton = styled.div`
@@ -44,5 +48,16 @@ export const NextButton = styled.div`
   right: 0;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
+`;
+
+export const CustomSlider = styled(Slider)`
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-slide > div {
+    padding: 0 10px;
+  }
 `;

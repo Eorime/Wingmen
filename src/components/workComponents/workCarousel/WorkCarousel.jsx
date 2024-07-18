@@ -1,5 +1,16 @@
 import React from "react";
-import Slider from "react-slick";
+import {
+  Container,
+  WorkCarouselContainer,
+  WorkContainer,
+  WorkImage,
+  WorkTitle,
+  PrevButton,
+  NextButton,
+  ButtonImage,
+  CustomSlider,
+  ButtonsContainer,
+} from "./style"; // Ensure correct path to style.js
 import ImageCarousel from "../../../assets/image (17).png";
 import ImageCarousel2 from "../../../assets/image (17).png";
 import ImageCarousel3 from "../../../assets/image (17).png";
@@ -8,16 +19,6 @@ import RightButton from "../../../assets/images/icons/carouselButtons/rightArrow
 // Import slick-carousel css files from node_modules
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  ButtonImage,
-  Container,
-  NextButton,
-  PrevButton,
-  WorkCarouselContainer,
-  WorkContainer,
-  WorkImage,
-  WorkTitle,
-} from "./style";
 
 const WorkCarousel = () => {
   const slides = [
@@ -29,35 +30,44 @@ const WorkCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    nextArrow: (
-      <NextButton>
-        <ButtonImage src={RightButton} />
-      </NextButton>
-    ),
-    prevArrow: (
-      <PrevButton>
-        <ButtonImage src={LeftButton} />
-      </PrevButton>
-    ),
+    slidesToScroll: 1,
+    initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
+  };
+
+  let customSlider;
+
+  const nextSlide = () => {
+    customSlider.slickNext();
+  };
+
+  const previousSlide = () => {
+    customSlider.slickPrev();
   };
 
   return (
     <Container>
       <WorkCarouselContainer>
-        <Slider {...settings}>
+        <CustomSlider {...settings} ref={(slider) => (customSlider = slider)}>
           {slides.map((slide, index) => (
             <WorkContainer key={index}>
               <WorkImage src={slide.image} alt={slide.title} />
               <WorkTitle>{slide.title}</WorkTitle>
             </WorkContainer>
           ))}
-        </Slider>
+        </CustomSlider>
       </WorkCarouselContainer>
+      <ButtonsContainer>
+        <PrevButton onClick={previousSlide}>
+          <ButtonImage src={LeftButton} />
+        </PrevButton>
+        <NextButton onClick={nextSlide}>
+          <ButtonImage src={RightButton} />
+        </NextButton>
+      </ButtonsContainer>
     </Container>
   );
 };
