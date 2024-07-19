@@ -10,6 +10,8 @@ import {
   ButtonImage,
   CustomSlider,
   ButtonsContainer,
+  WorkCategory,
+  TitleCategoryContainer,
 } from "./style"; // Ensure correct path to style.js
 import ImageCarousel from "../../../assets/image (17).png";
 import ImageCarousel2 from "../../../assets/image (17).png";
@@ -22,9 +24,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const WorkCarousel = () => {
   const slides = [
-    { image: ImageCarousel, title: "TITLE 1" },
-    { image: ImageCarousel2, title: "TITLE 2" },
-    { image: ImageCarousel3, title: "TITLE 3" },
+    { image: ImageCarousel, title: "TITLE 1", category: "CATEGORY 1" },
+    { image: ImageCarousel2, title: "TITLE 2", category: "CATEGORY 2" },
+    { image: ImageCarousel3, title: "TITLE 3", category: "CATEGORY 3" },
   ];
 
   const settings = {
@@ -55,7 +57,10 @@ const WorkCarousel = () => {
           {slides.map((slide, index) => (
             <WorkContainer key={index}>
               <WorkImage src={slide.image} alt={slide.title} />
-              <WorkTitle>{slide.title}</WorkTitle>
+              <TitleCategoryContainer>
+                <WorkTitle>{slide.title}</WorkTitle>
+                <WorkCategory>{slide.category}</WorkCategory>
+              </TitleCategoryContainer>
             </WorkContainer>
           ))}
         </CustomSlider>

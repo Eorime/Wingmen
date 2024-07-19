@@ -20,23 +20,39 @@ export const WorkContainer = styled.div`
 `;
 
 export const WorkImage = styled.img`
-  width: 710px;
-  height: 710px;
+  width: 700px;
+  height: 700px;
+`;
+
+export const TitleCategoryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 83%;
 `;
 
 export const WorkTitle = styled.h3`
-  margin-top: 10px;
+  margin-top: 40px;
+  font-size: 20px;
+  // margin-left: -345px;
+`;
+
+export const WorkCategory = styled.h3`
+  margin-top: 40px;
+  font-size: 15px;
+  // margin-right: -300px;
 `;
 
 export const ButtonImage = styled.img`
-  width: 65px;
-  height: 90px;
+  width: 60px;
+  height: 85px;
 `;
 
 export const ButtonsContainer = styled.div`
   position: absolute;
-  top: -106px;
+  top: -102px;
   left: 400px;
+  z-index: 1;
 `;
 
 export const PrevButton = styled.div`
@@ -44,7 +60,6 @@ export const PrevButton = styled.div`
   left: 90px;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 2;
 `;
 
 export const NextButton = styled.div`
@@ -52,7 +67,6 @@ export const NextButton = styled.div`
   left: 200px;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 2;
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -62,6 +76,7 @@ export const CustomSlider = styled(Slider)`
   }
 
   .slick-slide > div {
-    padding: 0 5px;
+    padding: 0 2px;
+    margin-right: -100px;
   }
 `;
