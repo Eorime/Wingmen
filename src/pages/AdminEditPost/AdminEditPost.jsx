@@ -18,6 +18,7 @@ const AdminEditPost = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
+    category: "",
     date: "",
     description: "",
     images: [],
@@ -80,6 +81,7 @@ const AdminEditPost = () => {
 
     const formDataToSend = new FormData();
     formDataToSend.append("name", formData.name);
+    formDataToSend.append("category", formData.category);
     formDataToSend.append("date", formData.date);
     formDataToSend.append("description", formData.description);
 
@@ -125,11 +127,21 @@ const AdminEditPost = () => {
       ) : (
         <Form onSubmit={handleSubmit}>
           <FormGroup>
-            <Label>Name</Label>
+            <Label>Project Name</Label>
             <Input
               type="text"
               name="name"
               value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label>Project Category</Label>
+            <Input
+              type="text"
+              name="category"
+              value={formData.category}
               onChange={handleChange}
               required
             />

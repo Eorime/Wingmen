@@ -15,6 +15,7 @@ import AdminNavigation from "../../components/adminComponents/adminNavigation/Ad
 const AdminAddPost = () => {
   const [formData, setFormData] = useState({
     name: "",
+    category: "",
     date: "",
     description: "",
     images: [],
@@ -42,6 +43,7 @@ const AdminAddPost = () => {
 
     const formDataToSend = new FormData();
     formDataToSend.append("name", formData.name);
+    formDataToSend.append("category", formData.category);
     formDataToSend.append("date", formData.date);
     formDataToSend.append("description", formData.description);
 
@@ -62,6 +64,7 @@ const AdminAddPost = () => {
       setSuccessMessage("Project added successfully");
       setFormData({
         name: "",
+        category: "",
         date: "",
         description: "",
         images: [],
@@ -82,11 +85,21 @@ const AdminAddPost = () => {
       <AdminNavigation />
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label>Project Name:</Label>
+          <Label>Project Name</Label>
           <Input
             type="text"
             name="name"
             value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label>Project Category</Label>
+          <Input
+            type="text"
+            name="category"
+            value={formData.category}
             onChange={handleChange}
             required
           />
@@ -102,7 +115,7 @@ const AdminAddPost = () => {
           />
         </FormGroup>
         <FormGroup>
-          <Label>Description:</Label>
+          <Label>Description</Label>
           <TextArea
             name="description"
             value={formData.description}
@@ -111,7 +124,7 @@ const AdminAddPost = () => {
           />
         </FormGroup>
         <FormGroup>
-          <Label>Images:</Label>
+          <Label>Image</Label>
           <Input
             type="file"
             name="images"
@@ -127,7 +140,7 @@ const AdminAddPost = () => {
       <FormGroup>
         {formData.images.length > 0 && (
           <div>
-            <h2>Selected Images:</h2>
+            <h2>Selected Images</h2>
             {formData.images.map((image, index) => (
               <div key={index}>
                 <ProjectImg
