@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Container,
-  MessagesContainerStyle,
   MessageText,
   OneMessageContainer,
   StickyMessageContainer,

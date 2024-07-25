@@ -11,6 +11,7 @@ import MotionContainer from "../../components/LandingComponents/motionContainer/
 import MessagesContainer from "../../components/LandingComponents/messagesContainer/MessagesContainer";
 import Work from "../Work/Work";
 import ServicesLanding from "../ServicesLanding/ServicesLanding";
+import ClientsTickerTape from "../../components/LandingComponents/clientsTicker/ClientsTickerTape";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <MessagesContainer />
       <Work />
       <ServicesLanding />
+      <ClientsTickerTape />
       <Contact />
       <InquiryForm />
       <Footer />

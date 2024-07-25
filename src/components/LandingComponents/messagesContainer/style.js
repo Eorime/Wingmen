@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-height: 1000vh;
+  min-height: 200vh; //es dasafixi gaq
 `;
 
 // export const MessagesContainerStyle = styled.div`
