@@ -4,6 +4,8 @@ import {
   MessagesContainerStyle,
   MessageText,
   OneMessageContainer,
+  StickyMessageContainer,
+  StickyMessageText,
 } from "./style";
 
 const MessagesContainer = () => {
@@ -17,6 +19,9 @@ const MessagesContainer = () => {
           <MessageText>mesiji var magary da very fun </MessageText>
         </OneMessageContainer> */}
       {/* </MessagesContainerStyle> */}
+      <StickyMessageContainer>
+        <StickyMessageText>Sticky vvvar gtxovv imushavee</StickyMessageText>
+      </StickyMessageContainer>
     </Container>
   );
 };
