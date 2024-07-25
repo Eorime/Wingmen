@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ClientsTickerContainer,
+  ClientTickerLine,
   Container,
   LogoImg,
   TickerContainerHeader,
@@ -19,6 +20,7 @@ const ClientsTickerTape = () => {
   return (
     <TickerContainerWrapper>
       <TickerContainerHeader>COMPANIES WE'VE WORKED WITH</TickerContainerHeader>
+      <ClientTickerLine />
       <Container>
         <ClientsTickerContainer>
           <LogoImg src={DBlock} />
@@ -41,6 +43,7 @@ const ClientsTickerTape = () => {
           <LogoImg src={Dovlati} />
         </ClientsTickerContainer>
       </Container>
+      <ClientTickerLine />
     </TickerContainerWrapper>
   );
 };

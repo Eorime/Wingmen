@@ -39,4 +39,10 @@ export const LogoImg = styled.img`
   margin: 0 105px;
 `;
 
-export const ClientTickerLine = styled.div``;
+export const ClientTickerLine = styled.div`
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-top: 50px;
+  margin-bottom: -20px;
+`;
