@@ -42,10 +42,10 @@ export const StickyMessageContainer = styled.div`
   position: sticky;
   height: auto;
   width: 215px;
-  top: 220px;
+  top: 210px;
   left: 86.2%;
   padding-left: 6px;
-  margin-top: 650px;
+  margin-top: 630px;
   background-color: transparent;
   border: 1px solid #000000;
   backdrop-filter: blur(20px);
