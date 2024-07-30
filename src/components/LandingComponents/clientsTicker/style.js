@@ -19,7 +19,7 @@ export const TickerContainerHeader = styled.h1`
   font-family: "NexaBold", sans-serif;
   max-width: 1090px;
   color: #0600ff;
-  margin-left: 185px;
+  margin-left: 75px;
 `;
 
 export const Container = styled.div`

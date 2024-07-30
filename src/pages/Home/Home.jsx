@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import TickerTape from "../../components/LandingComponents/tickerTape/TickerTape";
+import TickerTape from "../../components/LandingComponents/TickerTape/TickerTape";
 import Description from "../../components/LandingComponents/description/Description";
 import WhatsAppContact from "../../components/LandingComponents/whatsAppContact/WhatsAppContact";
 import Contact from "../../components/LandingComponents/contact/Contact";
